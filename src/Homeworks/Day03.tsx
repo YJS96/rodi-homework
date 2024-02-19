@@ -4,7 +4,7 @@ import CustomText from "../components/CustomText";
 export default function Day03() {
   return (
     <>
-      <div className="w-screen px-1">
+      <div className="px-1">
         <CustomText fontWeight={"light"} textAlign={"left"} textSize={"small"}>
           Light, Left, Small
         </CustomText>
