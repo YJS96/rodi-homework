@@ -1,0 +1,62 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  font-family: Pretendard !important;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-gray900);
+}
+
+:root {
+  --color-main: #2cb97c;
+  --color-main-hover: #28aa72;
+  --color-lightmain: #90f899;
+  --color-blue: #4a7ff7;
+  --color-darkmain: #097eea;
+  --color-gray900: #191f28;
+  --color-gray800: #47515f;
+  --color-gray700: #5a6574;
+  --color-gray600: #77828f;
+  --color-gray500: #99a2ad;
+  --color-gray400: #bcc3c9;
+  --color-gray300: #f1f3f5;
+  --color-gray200: #f7f8fa;
+  --color-red: #ff3233;
+  --color-border: #e5e8eb;
+  --color-bg-green10: #e9f7f1;
+  --color-bg-green20: #e9feeb;
+  --color-white: #ffffff;
+}
+
+body {
+  background-color: var(--color-white);
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+.day-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 2px 16px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+  border: none;
+}
+.day-button:hover {
+  background-color: var(--color-main-hover);
+}
