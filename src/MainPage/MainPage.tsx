@@ -12,6 +12,9 @@ export default function MainPage() {
       <div className="day-button ms-6" onClick={() => navigate("/day03")}>
         DAY03
       </div>
+      <div className="day-button ms-6" onClick={() => navigate("/day04")}>
+        DAY04
+      </div>
     </>
   );
 }

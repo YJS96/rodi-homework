@@ -1,7 +1,7 @@
 import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
-const customtext = cva("customtext", {
+const polytext = cva("polytext", {
   variants: {
     fontWeight: {
       light: ["font-light"],
@@ -26,19 +26,24 @@ const customtext = cva("customtext", {
   },
 });
 
-type CustomTextProps = React.HTMLAttributes<HTMLDivElement> &
-  VariantProps<typeof customtext>;
+type PolyTextProps<T extends React.ElementType> = {
+  as?: T;
+} & React.HTMLAttributes<T> &
+  VariantProps<typeof polytext>;
 
-export default function CustomText({
+const PolyText = React.forwardRef<HTMLElement, PolyTextProps<React.ElementType>>(({
+  as: Component = "div",
   fontWeight,
   textAlign,
   textSize,
   children,
   ...props
-}: CustomTextProps) {
-  return (
-    <div className={customtext({ fontWeight, textAlign, textSize })} {...props}>
-      {children}
-    </div>
-  );
-}
+}, ref) => {
+  return React.createElement(Component, {
+    className: polytext({ fontWeight, textAlign, textSize }),
+    ref,
+    ...props,
+  }, children);
+});
+
+export default PolyText;
